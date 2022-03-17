@@ -1,29 +1,16 @@
 #include "main.h"
-#include<stdio.h>
 
 /**
- * print_sign - prints the sign of a number
- *
- * @c: number to check
- *
- * Return: +1 if is positive, 0 if is 0 and -1 if is negative
+ * _abs -check main
+ * @x: An integer input
+ * Description: it computes value of integer
+ * Return: ABsolute value of x
  */
-
-int print_sign(int c)
+int _abs(int x)
 {
-	if (c > 0)
-	{
-		_putchar('+');
-		return (1);
-	}
-	else if (c == 0)
-	{
-		_putchar('0');
-		return (0);
-	}
+
+	if (x >= 0)
+		return (x);
 	else
-	{
-		_putchar('-');
-		return (-1);
-	}
+		return (x * -1);
 }

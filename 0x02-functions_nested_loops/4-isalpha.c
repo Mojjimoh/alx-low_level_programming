@@ -1,19 +1,23 @@
 #include "main.h"
 
 /**
- * _isalpha - Function checks is a capital letter
- *
- * @c: character to be checked
- *
- * Return: 1 if c is letter 0 otherwise
+ * _isalpha - Check main
+ * @c: An input character
+ * Returns 1 if c is a letter, lowercase or uppercase
+ *Return: 1 or 0 in otherwise
  */
-
 int _isalpha(int c)
 {
-	if ((c >= 65) && (c <= 90))
-		return (1);
-	else if ((c >= 97) && (c <= 122))
-		return (1);
-	else
-		return (0);
+	char lower, upper;
+	int isletter = 0;
+
+	for (lower = 'a'; lower <= 'z'; lower++)
+	{
+		for (upper = 'A'; upper <= 'Z'; upper++)
+		{
+			if (c == lower || c == upper)
+				isletter = 1;
+		}
+	}
+	return (isletter);
 }
